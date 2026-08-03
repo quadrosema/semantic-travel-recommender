@@ -1,0 +1,92 @@
+destinations = [
+    {
+        "name": "Paris",
+        "country": "France",
+        "description": "Famous for art, museums, and historical landmarks. Home to the Louvre, Eiffel Tower, and centuries of European art and architecture.",
+        "category": "Culture",
+    },
+    {
+        "name": "Bali",
+        "country": "Indonesia",
+        "description": "Tropical beaches, rice terraces, and vibrant culture. A relaxing island escape with lush jungles, surf breaks, and ancient temples.",
+        "category": "Beach",
+    },
+    {
+        "name": "Yellowstone",
+        "country": "USA",
+        "description": "Geysers, wildlife, and stunning natural landscapes. Home to Old Faithful, hot springs, bison herds, and dramatic canyons.",
+        "category": "Nature",
+    },
+    {
+        "name": "Tokyo",
+        "country": "Japan",
+        "description": "A dazzling, ultra-modern metropolis famous for neon-lit nightlife, cutting-edge technology, and an endless variety of nightclubs and izakayas.",
+        "category": "City",
+    },
+    {
+        "name": "Santorini",
+        "country": "Greece",
+        "description": "Whitewashed cliffside villages overlooking the Aegean Sea, famous for romantic sunsets, wine tasting, and stunning caldera views.",
+        "category": "Culture",
+    },
+    {
+        "name": "Patagonia",
+        "country": "Argentina/Chile",
+        "description": "Rugged mountains, glaciers, and windswept plains ideal for serious hiking and trekking adventures far from civilization.",
+        "category": "Adventure",
+    },
+    {
+        "name": "Maldives",
+        "country": "Maldives",
+        "description": "Crystal-clear turquoise water, overwater bungalows, and pristine white-sand beaches perfect for a tropical paradise getaway.",
+        "category": "Beach",
+    },
+    {
+        "name": "Kyoto",
+        "country": "Japan",
+        "description": "Ancient temples, traditional tea houses, and serene Zen gardens showcasing centuries of Japanese history and craftsmanship.",
+        "category": "Culture",
+    },
+    {
+        "name": "Queenstown",
+        "country": "New Zealand",
+        "description": "The adventure capital of the world, offering bungee jumping, skydiving, jet boating, and dramatic alpine scenery.",
+        "category": "Adventure",
+    },
+    {
+        "name": "New York City",
+        "country": "USA",
+        "description": "A vibrant, fast-paced city famous for Broadway shows, world-class nightlife, iconic skyscrapers, and nonstop energy at every hour.",
+        "category": "City",
+    },
+    {
+        "name": "Banff National Park",
+        "country": "Canada",
+        "description": "Turquoise glacial lakes, snow-capped peaks, and abundant wildlife make this a premier destination for hiking and mountain scenery.",
+        "category": "Nature",
+    },
+    {
+        "name": "Venice",
+        "country": "Italy",
+        "description": "A romantic city of canals, gondolas, and Renaissance art, famous for intimate candlelit dinners and centuries-old architecture.",
+        "category": "Culture",
+    },
+    {
+        "name": "Great Barrier Reef",
+        "country": "Australia",
+        "description": "The world's largest coral reef system, offering world-class snorkeling, scuba diving, and vibrant marine life beneath tropical waters.",
+        "category": "Nature",
+    },
+    {
+        "name": "Barcelona",
+        "country": "Spain",
+        "description": "A lively coastal city blending stunning Gaudi architecture, Mediterranean beaches, and a buzzing nightlife scene that runs until dawn.",
+        "category": "City",
+    },
+    {
+        "name": "Nepal Himalayas",
+        "country": "Nepal",
+        "description": "Home to Mount Everest and legendary trekking routes through dramatic mountain passes, ideal for serious high-altitude adventure seekers.",
+        "category": "Adventure",
+    },
+]
