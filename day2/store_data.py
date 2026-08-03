@@ -1,27 +1,26 @@
 import pandas as pd
 import numpy as np
-from db import get_session
-from models import Destination
+from db import engine
+from models import destinations
 
 df = pd.read_pickle("../day1/destinations_with_embeddings.pkl")
 
-session = get_session()
-session.query(Destination).delete()
+with engine.begin() as conn:
+    conn.execute(destinations.delete())
 
-for _, row in df.iterrows():
-    embedding_array = np.array(row["embedding"], dtype=np.float32)
-    dest = Destination(
-        name=row["name"],
-        country=row["country"],
-        description=row["description"],
-        category=row["category"],
-        embedding=embedding_array.tobytes(),
-    )
-    session.add(dest)
+    rows = []
+    for _, row in df.iterrows():
+        embedding_array = np.array(row["embedding"], dtype=np.float32)
+        rows.append({
+            "name": row["name"],
+            "country": row["country"],
+            "description": row["description"],
+            "category": row["category"],
+            "embedding": embedding_array.tobytes(),
+        })
 
-session.commit()
+    conn.execute(destinations.insert(), rows)
 
-count = session.query(Destination).count()
-print(f"Stored {count} destinations in the database.")
+    stored_count = len(conn.execute(destinations.select()).fetchall())
 
-session.close()
+print(f"Stored {stored_count} destinations in the database.")

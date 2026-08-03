@@ -1,18 +1,17 @@
-from sqlalchemy import Column, Integer, String, LargeBinary
-from db import Base, engine
+from sqlalchemy import Table, Column, Integer, String, LargeBinary
+from db import metadata, engine
 
-
-class Destination(Base):
-    __tablename__ = "destinations"
-
-    id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False)
-    country = Column(String, nullable=False)
-    description = Column(String, nullable=False)
-    category = Column(String, nullable=False)
-    embedding = Column(LargeBinary, nullable=False) 
-
+destinations = Table(
+    "destinations",
+    metadata,
+    Column("id", Integer, primary_key=True),
+    Column("name", String, nullable=False),
+    Column("country", String, nullable=False),
+    Column("description", String, nullable=False),
+    Column("category", String, nullable=False),
+    Column("embedding", LargeBinary, nullable=False),  # stored as bytes
+)
 
 if __name__ == "__main__":
-    Base.metadata.create_all(engine)
+    metadata.create_all(engine)
     print("Table 'destinations' created (or already exists).")
